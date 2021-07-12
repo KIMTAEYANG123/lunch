@@ -3,6 +3,7 @@ import { query as q } from 'faunadb';
 import { imgURLObj, nameTypes } from '../../data';
 import db from '../../db';
 import Img from '../Atom/Img';
+import TextList from '../Molecules/TextList';
 
 type LunchValueProps = {
     name: nameTypes;
@@ -52,6 +53,8 @@ const LunchValue = ({
             <div onClick={handleClickToResetValue}>
                 <Img isSelected ={isSelected} name ={name} imgURLObj={imgURLObj}></Img>
             </div>
+            <TextList loading ={loading} isSelected={isSelected} value={value}/>
+          
             {/* <div
                 style={{
                     display: 'flex',

@@ -5,6 +5,8 @@ import { query as q } from 'faunadb';
 import Title from '../components/Molecules/Title';
 import ValueInput from '../components/Molecules/ValueInput';
 import  Form  from '../components/Molecules/Form';
+
+import InputContent from '../components/Organisms/InputContent';
 import LunchValue from '../components/Molecules/LunchValue';
 import { imgURLObj, nameTypes, defaultValueList } from '../data';
 import db from '../db';
@@ -85,7 +87,9 @@ export default function Home() {
         <div style={{ margin: '0px 16px' }}>
             {/* <Title>오늘 먹은 점심 값은?</Title> */}
             <Title></Title>
-            <div style={{ marginBottom: 8, height: 36 }}>
+            <InputContent valueInput={(<ValueInput selectedName={selectedName} handleChangeName={handleChangeName}/>)}
+            form = {(<Form  value ={value} handleChangeValue={handleChangeValue} handleClick={handleClick}/>)}/> 
+            {/* <div style={{ marginBottom: 8, height: 36 }}> */}
                 {/* <select
                     style={{
                         marginRight: 16,
@@ -107,12 +111,6 @@ export default function Home() {
                         </option>
                     ))}
                 </select> */}
-                <ValueInput selectedName={selectedName} handleChangeName={handleChangeName}>
-                    
-                </ValueInput>
-                <Form  value ={value} handleChangeValue={handleChangeValue} handleClick={handleClick}>
-
-                </Form>
                  {/* <input
                     type='number'
                     style={{
@@ -140,7 +138,7 @@ export default function Home() {
                     입력
                 </button> */}
                
-            </div>
+            {/* </div> */}
             <div style={{ display: 'flex', height: '90%' }}>
                 <div style={{ flex: 1 }}>
                     {nameList.map((name: nameTypes, i: number) => (

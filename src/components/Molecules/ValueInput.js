@@ -2,7 +2,7 @@ import React from 'react';
 import Select from '../Atom/Select';
 import { imgURLObj, nameTypes, defaultValueList } from '../../data';
 
-const ValueInput = ({selectedName,handleChangeName,children})=>{
+const ValueInput = ({selectedName,handleChangeName})=>{
     const nameList = Object.keys(imgURLObj);
 
     return(
