@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Button = ({})=>{
+const Button = ({handleClick ,loading})=>{
     return (
         <button
         style={{
@@ -11,10 +11,12 @@ const Button = ({})=>{
             background: 'white',
             fontSize: 20,
         }}
-        disabled={loading}
+         disabled={loading}
         onClick={handleClick}
     >
         입력
     </button>
     )
 }
+
+export default Button;

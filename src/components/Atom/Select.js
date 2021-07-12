@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Select = ({handleChangeName})=>{
+const Select = ({handleChangeName,children})=>{
     return (
         <select
             style={{
@@ -12,7 +12,7 @@ const Select = ({handleChangeName})=>{
                 fontSize: 20,
             }}
                 onChange={handleChangeName}
-            ></select>
+            >{children}</select>
     )
 }
 

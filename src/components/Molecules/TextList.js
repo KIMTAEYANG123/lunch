@@ -1,7 +1,7 @@
-import React from 'raect';
+import React from 'react';
 
 
-const TextList = ({}) =>{
+const TextList = ({isSelected,loading,value}) =>{
     return (
         <div style={{
             display: 'flex',
@@ -15,3 +15,5 @@ const TextList = ({}) =>{
        
     )
 }
+
+export default TextList;

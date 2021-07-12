@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Input = ({value,handleChangeValue})=>{
+const Input = ({value ,handleChangeValue})=>{
     return (
         <input
         type='number'
@@ -10,7 +10,7 @@ const Input = ({value,handleChangeValue})=>{
             borderBottom: '1px solid grey',
             fontSize: 20,
         }}
-        value={value}
+         value={value}
         onChange={handleChangeValue}
     />
     )

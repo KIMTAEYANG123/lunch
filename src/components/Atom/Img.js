@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Img = ({}) =>{
+const Img = ({imgURLObj,name,isSelected}) =>{
     return (
         <img
         style={{

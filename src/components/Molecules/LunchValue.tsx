@@ -1,7 +1,8 @@
 import { query as q } from 'faunadb';
 
-import { imgURLObj, nameTypes } from '../data';
-import db from '../db';
+import { imgURLObj, nameTypes } from '../../data';
+import db from '../../db';
+import Img from '../Atom/Img';
 
 type LunchValueProps = {
     name: nameTypes;
@@ -49,17 +50,7 @@ const LunchValue = ({
             }}
         >
             <div onClick={handleClickToResetValue}>
-                {/* <img
-                    style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        height: 40,
-                        width: 40,
-                        border: isSelected ? '2px solid grey' : undefined,
-                        borderRadius: 8,
-                    }}
-                    src={imgURLObj[name]}
-                /> */}
+                <Img isSelected ={isSelected} name ={name} imgURLObj={imgURLObj}></Img>
             </div>
             {/* <div
                 style={{
