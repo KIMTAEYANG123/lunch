@@ -5,9 +5,10 @@ import { query as q } from 'faunadb';
 import Title from '../components/Molecules/Title';
 import ValueInput from '../components/Molecules/ValueInput';
 import  Form  from '../components/Molecules/Form';
-
+import RestMoney from '../components/Molecules/RestMoney';
+import List from '../components/Molecules/List';
 import InputContent from '../components/Organisms/InputContent';
-import LunchValue from '../components/Molecules/LunchValue';
+import LunchContent from '../components/Organisms/LunchContent';
 import { imgURLObj, nameTypes, defaultValueList } from '../data';
 import db from '../db';
 
@@ -139,8 +140,11 @@ export default function Home() {
                 </button> */}
                
             {/* </div> */}
-            <div style={{ display: 'flex', height: '90%' }}>
-                <div style={{ flex: 1 }}>
+            <LunchContent list={(<List selectedName={selectedName} valueList={valueList} setValueList={setValueList}loading={loading}setLoading={setLoading}/>)}
+            restMoney = {(<RestMoney percentLeftTotalvalue={percentLeftTotalvalue} defaultTotalValue={defaultTotalValue} getTotalValue={getTotalValue} valueList={valueList}/>)}
+            />
+            {/* <div style={{ display: 'flex', height: '90%' }}> */}
+                {/* <div style={{ flex: 1 }}>
                     {nameList.map((name: nameTypes, i: number) => (
                         <LunchValue
                             key={i}
@@ -153,8 +157,10 @@ export default function Home() {
                             setLoading={setLoading}
                         />
                     ))}
-                </div>
-                <div style={{ flex: 1 }}>
+                </div> */}
+                
+                
+                {/* <div style={{ flex: 1 }}>
                     <div
                         style={{
                             display: 'flex',
@@ -189,8 +195,8 @@ export default function Home() {
                     >{`${new Date().getMonth() + 1}월 : ${getTotalValue(
                         valueList
                     )}원`}</div>
-                </div>
-            </div>
+                </div> */}
+            {/* </div> */}
         </div>
     );
 }
